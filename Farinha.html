@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Farinha</title>
+    <style>
+        /* Configuração geral */
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f0f9ff, #e0f7fa, #e8f5e9);
+            color: #333;
+        }
+        /* Cabeçalho */
+        .header {
+            text-align: center;
+            background: linear-gradient(to right, #43a047, #66bb6a, #81c784);
+            color: white;
+            padding: 50px 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            border-bottom-left-radius: 50% 20%;
+            border-bottom-right-radius: 50% 20%;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 3.5em;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+        }
+        .header p {
+            font-size: 1.5em;
+            margin-top: 10px;
+            letter-spacing: 0.5px;
+        }
+        /* Layout do container */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 40px 20px;
+            gap: 25px;
+        }
+        /* Estilo dos cartões */
+        .card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            width: 280px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            transition: transform 0.4s ease, box-shadow 0.4s ease, border 0.4s ease;
+            position: relative;
+        }
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+            border: 2px solid #4caf50;
+        }
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+        .card:hover img {
+            transform: scale(1.1);
+        }
+        .card-content {
+            padding: 20px;
+            text-align: center;
+        }
+        .card h3 {
+            margin: 0;
+            font-size: 1.8em;
+            color: #333;
+            font-weight: 600;
+        }
+        .price {
+            font-size: 1.4em;
+            color: #43a047;
+            font-weight: bold;
+            margin: 10px 0 20px;
+        }
+        /* Botões */
+        .button {
+            display: inline-block;
+            background: linear-gradient(to right, #43a047, #66bb6a);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 1.1em;
+            font-weight: bold;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
+            letter-spacing: 0.5px;
+        }
+        .button:hover {
+            background: linear-gradient(to right, #388e3c, #43a047);
+            transform: scale(1.1);
+            box-shadow: 0 8px 20px rgba(56, 142, 60, 0.5);
+        }
+        /* Rodapé */
+        footer {
+            text-align: center;
+            padding: 25px 10px;
+            background: linear-gradient(to bottom, #e0f2f1, #e8f5e9);
+            font-size: 1em;
+            color: #555;
+            margin-top: 30px;
+        }
+        footer a {
+            text-decoration: none;
+            color: #43a047;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Catálogo de Farinha Fresca</h1>
+        <p>Escolha a melhor opção para você! Qualidade garantida.</p>
+    </div>
+    <div class="container">
+        <!-- Produto 1kg -->
+        <div class="card">
+            <img src="https://via.placeholder.com/300" alt="Farinha 1kg">
+            <div class="card-content">
+                <h3>Farinha 1kg</h3>
+                <p class="price">R$ 12,00</p>
+                <a href="https://wa.me/5537998055226?text=Quero+comprar+1kg+de+farinha!" class="button">Comprar Agora</a>
+            </div>
+        </div>
+        <!-- Produto 5kg -->
+        <div class="card">
+            <img src="https://via.placeholder.com/300" alt="Farinha 5kg">
+            <div class="card-content">
+                <h3>Farinha 5kg</h3>
+                <p class="price">R$ 55,00</p>
+                <a href="https://wa.me/5537998055226?text=Quero+comprar+5kg+de+farinha!" class="button">Comprar Agora</a>
+            </div>
+        </div>
+        <!-- Produto 10kg -->
+        <div class="card">
+            <img src="https://via.placeholder.com/300" alt="Farinha 10kg">
+            <div class="card-content">
+                <h3>Farinha 10kg</h3>
+                <p class="price">R$ 100,00</p>
+                <a href="https://wa.me/5537998055226?text=Quero+comprar+10kg+de+farinha!" class="button">Comprar Agora</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+        © 2024 Farinha Fresca Axixá - Desenvolvido com carinho por <a href="#">Seu Nome</a>
+    </footer>
+</body>
+</html>
