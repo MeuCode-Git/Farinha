@@ -4,36 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catálogo de Farinha</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         /* Configuração geral */
         body {
-            font-family: 'Poppins', Arial, sans-serif;
+            font-family: 'Roboto', Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #f0f9ff, #e0f7fa, #e8f5e9);
+            background: #f8f9fa;
             color: #333;
         }
         /* Cabeçalho */
         .header {
             text-align: center;
-            background: linear-gradient(to right, #43a047, #66bb6a, #81c784);
+            background: #2e7d32;
             color: white;
-            padding: 50px 20px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-            border-bottom-left-radius: 50% 20%;
-            border-bottom-right-radius: 50% 20%;
+            padding: 40px 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        .header img {
+            width: 80px;
+            margin-bottom: 15px;
         }
         .header h1 {
             margin: 0;
-            font-size: 3.5em;
+            font-size: 2.8em;
             font-weight: 700;
-            letter-spacing: 1px;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
         }
         .header p {
-            font-size: 1.5em;
+            font-size: 1.3em;
             margin-top: 10px;
-            letter-spacing: 0.5px;
+        }
+        /* Seção de Certificações */
+        .certifications {
+            text-align: center;
+            margin: 30px 20px;
+            background: #e8f5e9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+        .certifications h2 {
+            font-size: 1.8em;
+            color: #2e7d32;
+            margin-bottom: 10px;
+        }
+        .certifications p {
+            font-size: 1.2em;
+            line-height: 1.5;
         }
         /* Layout do container */
         .container {
@@ -46,26 +64,21 @@
         /* Estilo dos cartões */
         .card {
             background: white;
-            border-radius: 15px;
+            border-radius: 10px;
             overflow: hidden;
             width: 280px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-            transition: transform 0.4s ease, box-shadow 0.4s ease, border 0.4s ease;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             position: relative;
         }
         .card:hover {
             transform: scale(1.05);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
-            border: 2px solid #4caf50;
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
         }
         .card img {
             width: 100%;
             height: 180px;
             object-fit: cover;
-            transition: transform 0.4s ease;
-        }
-        .card:hover img {
-            transform: scale(1.1);
         }
         .card-content {
             padding: 20px;
@@ -73,56 +86,63 @@
         }
         .card h3 {
             margin: 0;
-            font-size: 1.8em;
+            font-size: 1.5em;
             color: #333;
             font-weight: 600;
         }
         .price {
-            font-size: 1.4em;
-            color: #43a047;
+            font-size: 1.3em;
+            color: #2e7d32;
             font-weight: bold;
             margin: 10px 0 20px;
         }
         /* Botões */
         .button {
             display: inline-block;
-            background: linear-gradient(to right, #43a047, #66bb6a);
+            background: #2e7d32;
             color: white;
             padding: 12px 30px;
             border-radius: 30px;
             text-decoration: none;
-            font-size: 1.1em;
+            font-size: 1em;
             font-weight: bold;
             transition: all 0.3s ease-in-out;
-            box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
-            letter-spacing: 0.5px;
+            box-shadow: 0 5px 15px rgba(46, 125, 50, 0.4);
         }
         .button:hover {
-            background: linear-gradient(to right, #388e3c, #43a047);
+            background: #256d27;
             transform: scale(1.1);
-            box-shadow: 0 8px 20px rgba(56, 142, 60, 0.5);
+            box-shadow: 0 8px 20px rgba(37, 109, 39, 0.5);
         }
         /* Rodapé */
         footer {
             text-align: center;
             padding: 25px 10px;
-            background: linear-gradient(to bottom, #e0f2f1, #e8f5e9);
-            font-size: 1em;
+            background: #e8f5e9;
+            font-size: 0.9em;
             color: #555;
-            margin-top: 30px;
         }
         footer a {
             text-decoration: none;
-            color: #43a047;
+            color: #2e7d32;
             font-weight: bold;
         }
     </style>
 </head>
 <body>
     <div class="header">
+        <img src="https://meucode-git.github.io/Farinha/logo.png" alt="--">
         <h1>Catálogo de Farinha Fresca</h1>
-        <p>Escolha a melhor opção para você! Qualidade garantida.</p>
+        <p>Qualidade e segurança, direto da sua região.</p>
     </div>
+
+    <div class="certifications">
+        <h2>Por que confiar na Farinha Fresca?</h2>
+        <p>✔ Produzida com ingredientes selecionados<br>
+           ✔ Garantia de satisfação<br>
+           ✔ Produto certificado pela <strong>Agência de Qualidade Alimentar</strong></p>
+    </div>
+
     <div class="container">
         <!-- Produto 1kg -->
         <div class="card">
@@ -152,8 +172,11 @@
             </div>
         </div>
     </div>
+
     <footer>
-        © 2024 Farinha Fresca Axixá - Desenvolvido com carinho por <a href="#">Gerardo</a>
+        <p>© 2024 Farinha Fresca Axixá</p>
+        <p> | Endereço: Rua do Cedro, Axixá</p>
+        <p><a href="#">Política de Privacidade</a> | <a href="#">Termos de Uso</a></p>
     </footer>
 </body>
 </html>
