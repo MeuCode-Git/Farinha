@@ -11,128 +11,166 @@
             font-family: 'Roboto', Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: #f8f9fa;
+            background: #f1f1f1;
             color: #333;
+            line-height: 1.6;
         }
+
         /* Cabeçalho */
         .header {
             text-align: center;
             background: #2e7d32;
             color: white;
-            padding: 40px 20px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            padding: 50px 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
         .header img {
-            width: 80px;
+            width: 100px;
             margin-bottom: 15px;
         }
         .header h1 {
             margin: 0;
-            font-size: 2.8em;
+            font-size: 3em;
             font-weight: 700;
         }
         .header p {
-            font-size: 1.3em;
+            font-size: 1.5em;
             margin-top: 10px;
+            font-weight: 300;
         }
+
         /* Seção de Certificações */
         .certifications {
             text-align: center;
-            margin: 30px 20px;
+            margin: 40px 20px;
             background: #e8f5e9;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
         .certifications h2 {
-            font-size: 1.8em;
+            font-size: 2.2em;
             color: #2e7d32;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
         .certifications p {
             font-size: 1.2em;
-            line-height: 1.5;
+            line-height: 1.8;
+            color: #555;
         }
+
         /* Layout do container */
         .container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             padding: 40px 20px;
-            gap: 25px;
+            gap: 35px;
         }
+
         /* Estilo dos cartões */
         .card {
             background: white;
-            border-radius: 10px;
+            border-radius: 15px;
             overflow: hidden;
-            width: 280px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             position: relative;
+            margin: 0 20px 30px;
         }
         .card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
         }
         .card img {
             width: 100%;
-            height: 180px;
+            height: 200px;
             object-fit: cover;
+            border-bottom: 5px solid #e8f5e9;
         }
         .card-content {
-            padding: 20px;
+            padding: 25px;
             text-align: center;
+            background: #f9f9f9;
         }
         .card h3 {
             margin: 0;
-            font-size: 1.5em;
+            font-size: 1.7em;
             color: #333;
             font-weight: 600;
         }
         .price {
-            font-size: 1.3em;
+            font-size: 1.4em;
             color: #2e7d32;
             font-weight: bold;
-            margin: 10px 0 20px;
+            margin: 15px 0 20px;
         }
+
         /* Botões */
         .button {
             display: inline-block;
             background: #2e7d32;
             color: white;
-            padding: 12px 30px;
-            border-radius: 30px;
+            padding: 14px 35px;
+            border-radius: 35px;
             text-decoration: none;
-            font-size: 1em;
-            font-weight: bold;
+            font-size: 1.1em;
+            font-weight: 600;
+            text-transform: uppercase;
             transition: all 0.3s ease-in-out;
-            box-shadow: 0 5px 15px rgba(46, 125, 50, 0.4);
+            box-shadow: 0 8px 25px rgba(46, 125, 50, 0.2);
         }
+        /* Animação no logo */
+@keyframes logoAnimation {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.header img {
+    width: 100px;
+    margin-bottom: 15px;
+    animation: logoAnimation 1.5s ease-in-out forwards;
+}
         .button:hover {
             background: #256d27;
             transform: scale(1.1);
-            box-shadow: 0 8px 20px rgba(37, 109, 39, 0.5);
+            box-shadow: 0 12px 30px rgba(37, 109, 39, 0.4);
         }
+
         /* Rodapé */
         footer {
             text-align: center;
-            padding: 25px 10px;
+            padding: 30px 10px;
             background: #e8f5e9;
-            font-size: 0.9em;
+            font-size: 1em;
             color: #555;
+            border-top: 2px solid #2e7d32;
         }
         footer a {
             text-decoration: none;
             color: #2e7d32;
             font-weight: bold;
         }
+        footer p {
+            margin: 10px 0;
+        }
     </style>
 </head>
 <body>
     <div class="header">
-        <img src="https://meucode-git.github.io/Farinha/logo.png" alt="--">
-        <h1>Catálogo de Farinha Economica</h1>
+        <img src="https://meucode-git.github.io/Farinha/logo.png" alt="Logo">
+        <h1>Farinha Original</h1>
         <p>Qualidade e segurança, direto da sua região.</p>
     </div>
 
@@ -174,7 +212,7 @@
     </div>
 
     <footer>
-        <p>© 2024 Farinha de qualidade Axixá</p>
+        <p>© 2024 Farinha de Qualidade Axixá</p>
         <p> | Endereço: Rua do Cedro, Axixá</p>
         <p><a href="#">Política de Privacidade</a> | <a href="#">Termos de Uso</a></p>
     </footer>
